@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Pustaklok - Digital Library Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for animations and colors */
+        .header-bg {
+            background-color: #4f46e5; /* Primary Accent */
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-slideInUp {
+            animation: slideInUp 0.6s ease-out;
+        }
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-shadow {
+            transition: all 0.3s ease;
+        }
+        .card-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="header-bg text-white shadow-xl">
+        <div class="max-w-7xl mx-auto px-6 py-10">
+            <h1 class="text-5xl font-extrabold animate-fadeIn delay-100">
+                📚 Pustaklok
+            </h1>
+            <p class="mt-3 text-xl text-indigo-200 animate-fadeIn delay-200">A Modern Digital Library Management System</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-16">
+
+        <section id="overview" class="mb-20 animate-slideInUp">
+            <h2 class="text-4xl font-bold text-gray-900 border-b-4 border-indigo-500 pb-3 mb-10">
+                🚀 Project Overview
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <p class="text-lg mb-4">
+                        Pustaklok is a robust two-part application designed for efficiently managing a media collection (Books, Films, Magazines). It utilizes a modern **Flask API backend** for data handling and a user-friendly **Tkinter GUI frontend** for interaction.
+                    </p>
+                    <p class="text-lg mb-4">
+                        This clean, decoupled architecture ensures a maintainable and scalable system, separating data logic from the user interface for optimal performance and reliability.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full shadow-md">Python 3</span>
+                        <span class="bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full shadow-md">Flask API</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full shadow-md">Tkinter GUI</span>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 rounded-xl overflow-hidden shadow-2xl">
+                    <img src="./images/frontend_gui.png" alt="Pustaklok Frontend GUI Screenshot" class="w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="mb-20">
+            <h2 class="text-4xl font-bold text-gray-900 border-b-4 border-indigo-500 pb-3 mb-10 animate-slideInUp delay-300">
+                ✨ Key Features
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-shadow animate-slideInUp">
+                    <h3 class="text-2xl font-semibold text-indigo-600 mb-3 flex items-center">
+                        <span class="text-3xl mr-3">➕</span> Data Management
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        Easily **Add**, **Delete**, and view detailed metadata for all media items. The dedicated creation dialog simplifies data input.
+                    </p>
+                    <div class="rounded-lg overflow-hidden border">
+                         <img src="./images/feature_add_item.png" alt="Add Item Dialog Screenshot" class="w-full h-auto">
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg card-shadow animate-slideInUp delay-100">
+                    <h3 class="text-2xl font-semibold text-indigo-600 mb-3 flex items-center">
+                        <span class="text-3xl mr-3">🔍</span> Advanced Search & Filter
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        Quickly locate items by **exact Title Search** or filter the entire list by **Category** (Book, Film, Magazine) instantly.
+                    </p>
+                     <div class="rounded-lg overflow-hidden border">
+                         <img src="./images/feature_search_filter.png" alt="Search and Filter Screenshot" class="w-full h-auto">
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg card-shadow animate-slideInUp delay-200">
+                    <h3 class="text-2xl font-semibold text-indigo-600 mb-3 flex items-center">
+                        <span class="text-3xl mr-3">📤</span> Borrow & Return Tracking
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        Manage item availability with clear visual status indicators (Available/Borrowed) and dedicated **Borrow** and **Return** buttons.
+                    </p>
+                    <div class="rounded-lg overflow-hidden border">
+                         <img src="./images/feature_borrow_list.png" alt="Borrowed Item List Screenshot" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="backend" class="mb-20 animate-slideInUp delay-400">
+            <h2 class="text-4xl font-bold text-gray-900 border-b-4 border-indigo-500 pb-3 mb-10">
+                ⚙️ Backend API (Flask)
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="rounded-xl overflow-hidden shadow-2xl">
+                    <img src="./images/backend_api_code.png" alt="Flask API Backend Code Screenshot" class="w-full h-auto">
+                </div>
+                <div>
+                    <p class="text-lg mb-4">
+                        The core logic is managed by a simple **RESTful API** built with Flask (`app.py`). It ensures transactional integrity for all data operations, including:
+                    </p>
+                    <ul class="list-disc list-inside space-y-3 pl-4 text-gray-700">
+                        <li><code class="bg-gray-200 text-indigo-700 p-1 rounded font-mono">GET /media</code>: Retrieve all items.</li>
+                        <li><code class="bg-gray-200 text-indigo-700 p-1 rounded font-mono">POST /media</code>: Create a new item.</li>
+                        <li><code class="bg-gray-200 text-indigo-700 p-1 rounded font-mono">DELETE /media/&lt;name&gt;</code>: Remove an item.</li>
+                        <li><code class="bg-gray-200 text-indigo-700 p-1 rounded font-mono">POST /media/&lt;name&gt;/borrow</code>: Update item status.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="run" class="mb-20 bg-white p-10 rounded-xl shadow-2xl animate-slideInUp delay-500">
+            <h2 class="text-4xl font-bold text-gray-900 border-b-4 border-indigo-500 pb-3 mb-10">
+                ▶️ How to Run Pustaklok
+            </h2>
+            <p class="text-lg mb-8">
+                To get the Pustaklok Digital Library up and running, follow these four simple steps:
+            </p>
+
+            <div class="space-y-8">
+                <div class="flex items-start">
+                    <div class="text-4xl font-bold text-indigo-600 mr-4">1.</div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Prerequisites</h3>
+                        <p class="text-gray-700">Ensure you have Python 3.x and the project files (`app.py`, `gui.py`, `storage.py`) downloaded.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="text-4xl font-bold text-indigo-600 mr-4">2.</div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Install Dependencies</h3>
+                        <p class="mb-4 text-gray-700">Install the required libraries (Flask and Requests) in your terminal:</p>
+                        <pre class="bg-gray-900 text-white p-4 rounded-lg overflow-x-auto text-sm"><code>pip install flask requests</code></pre>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="text-4xl font-bold text-indigo-600 mr-4">3.</div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Start the Backend API (Server)</h3>
+                        <p class="mb-4 text-gray-700">Run the Flask server, which will handle all data requests:</p>
+                        <pre class="bg-gray-900 text-white p-4 rounded-lg overflow-x-auto text-sm"><code>python app.py</code></pre>
+                        <p class="text-sm text-gray-500 mt-2">The server will run on <code class="bg-gray-200 text-gray-800 p-1 rounded">http://127.0.0.1:5000</code>.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="text-4xl font-bold text-indigo-600 mr-4">4.</div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Launch the Frontend GUI</h3>
+                        <p class="mb-4 text-gray-700">Open a **second terminal window** and launch the desktop application:</p>
+                        <pre class="bg-gray-900 text-white p-4 rounded-lg overflow-x-auto text-sm"><code>python gui.py</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="header-bg text-white mt-16">
+        <div class="max-w-7xl mx-auto px-6 py-6 text-center">
+            <p>&copy; 2025 Pustaklok Digital Library. Open Source Project.</p>
+        </div>
+    </footer>
+</body>
+</html>

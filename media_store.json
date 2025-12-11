@@ -1,0 +1,20 @@
+{
+  "Atomic Habits": {
+    "name": "Atomic Habits",
+    "author": "James Clear",
+    "publication_date": "2018-10-16",
+    "category": "Book",
+    "available": false,
+    "borrowed_by": "Madhav",
+    "borrow_date": "2025-12-07 01:35:46"
+  },
+  "Inception": {
+    "name": "Inception",
+    "author": "Christopher Nolan",
+    "publication_date": "2010-07-16",
+    "category": "Film",
+    "available": true,
+    "borrowed_by": null,
+    "borrow_date": null
+  }
+}
